@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom'
 import logo from '../../../assets/images/mfs.png';
 import AdminMenu from './Menu/AdminMenu';
 import GuestMenu from './Menu/GuestMenu';
+import MenuItem from './Menu/MenuItem';
+import { IoIosLogIn } from "react-icons/io";
 
 const Sidebar = () => {
     const [isActive, setActive] = useState(false)
@@ -14,9 +16,9 @@ const Sidebar = () => {
         setActive(!isActive)
     }
 
-    const isAdmin = 'admin'
-    // const isAdmin = 'agent'
-    // const isAdmin = 'user'
+    const role = "admin"
+    // const role = "agent"
+    // const role = "user"
 
     return (
         <>
@@ -67,9 +69,15 @@ const Sidebar = () => {
                     <div className='flex flex-col justify-between flex-1 mt-6'>
                         {/*  Menu Items */}
                         <nav>
-                            {isAdmin === 'admin' && <AdminMenu />}
+                            <MenuItem label={'Login'} address={'/login'} icon={IoIosLogIn} />
+                            {role === 'admin' && <AdminMenu />}
+                            {role === 'agent' && <GuestMenu />}
+
+
+
+                            {/* {isAdmin === 'admin' && <AdminMenu />}
                             {isAdmin === 'agent' && <GuestMenu />}
-                            {isAdmin === 'user' && <GuestMenu />}
+                            {isAdmin === 'user' && <GuestMenu />} */}
                         </nav>
                     </div>
                 </div>

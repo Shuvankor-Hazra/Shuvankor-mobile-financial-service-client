@@ -1,6 +1,6 @@
-import { FaHome, FaUserCog } from 'react-icons/fa'
-import { MdContacts, MdPreview } from 'react-icons/md'
+import { FaHome, FaUser } from 'react-icons/fa'
 import MenuItem from './MenuItem'
+import { FaCircleDollarToSlot } from "react-icons/fa6";
 
 const AdminMenu = () => {
     return (
@@ -8,17 +8,20 @@ const AdminMenu = () => {
             {/* Admin Dashboard */}
             <MenuItem
                 label='Admin Dashboard'
-                address='/dashboard/admin-home'
+                address='/adminDashboard'
                 icon={FaHome} />
 
             {/* Manage Users */}
-            <MenuItem label='Manage Users' address='manage-users' icon={FaUserCog} />
+            <MenuItem
+                label='Manage Users'
+                address='/manageUsers'
+                icon={FaUser} />
 
-            {/* Approved Premium */}
-            <MenuItem label='Approved Premium' address='approved-premium' icon={MdPreview} />
-
-            {/* Approved Contact Request */}
-            <MenuItem label='Approved Contact Request' address='approved-contact-request' icon={MdContacts} />
+            {/* All Transactions */}
+            <MenuItem
+                label='All Transactions'
+                address='/allTransactions'
+                icon={FaCircleDollarToSlot} />
         </>
     )
 }

@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types'
+/* eslint-disable react/prop-types */
 import { createContext, useEffect, useState } from 'react'
 import {
   GoogleAuthProvider,
@@ -94,11 +94,6 @@ const AuthProvider = ({ children }) => {
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
   )
-}
-
-AuthProvider.propTypes = {
-  // Array of children.
-  children: PropTypes.array,
 }
 
 export default AuthProvider
