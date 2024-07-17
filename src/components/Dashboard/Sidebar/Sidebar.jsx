@@ -3,10 +3,11 @@ import { GrLogout } from 'react-icons/gr'
 import { AiOutlineBars } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 import logo from '../../../assets/images/mfs.png';
-import AdminMenu from './Menu/AdminMenu';
-import GuestMenu from './Menu/GuestMenu';
 import MenuItem from './Menu/MenuItem';
 import { IoIosLogIn } from "react-icons/io";
+import AdminMenu from './Menu/AdminMenu';
+import AgentMenu from './Menu/AgentMenu';
+import UserMenu from './Menu/UserMenu';
 
 const Sidebar = () => {
     const [isActive, setActive] = useState(false)
@@ -16,9 +17,9 @@ const Sidebar = () => {
         setActive(!isActive)
     }
 
-    const role = "admin"
+    // const role = "admin"
     // const role = "agent"
-    // const role = "user"
+    const role = "user"
 
     return (
         <>
@@ -71,7 +72,8 @@ const Sidebar = () => {
                         <nav>
                             <MenuItem label={'Login'} address={'/login'} icon={IoIosLogIn} />
                             {role === 'admin' && <AdminMenu />}
-                            {role === 'agent' && <GuestMenu />}
+                            {role === 'agent' && <AgentMenu />}
+                            {role === 'user' && <UserMenu />}
 
 
 
