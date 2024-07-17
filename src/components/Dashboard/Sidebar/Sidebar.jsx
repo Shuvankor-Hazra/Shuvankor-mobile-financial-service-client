@@ -4,7 +4,7 @@ import { AiOutlineBars } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 import logo from '../../../assets/images/mfs.png';
 import MenuItem from './Menu/MenuItem';
-import { IoIosLogIn } from "react-icons/io";
+import { RiLoginBoxFill } from "react-icons/ri";
 import AdminMenu from './Menu/AdminMenu';
 import AgentMenu from './Menu/AgentMenu';
 import UserMenu from './Menu/UserMenu';
@@ -18,8 +18,8 @@ const Sidebar = () => {
     }
 
     // const role = "admin"
-    // const role = "agent"
-    const role = "user"
+    const role = "agent"
+    // const role = "user"
 
     return (
         <>
@@ -70,7 +70,7 @@ const Sidebar = () => {
                     <div className='flex flex-col justify-between flex-1 mt-6'>
                         {/*  Menu Items */}
                         <nav>
-                            <MenuItem label={'Login'} address={'/login'} icon={IoIosLogIn} />
+                            <MenuItem label={'Login'} address={'/login'} icon={RiLoginBoxFill} />
                             {role === 'admin' && <AdminMenu />}
                             {role === 'agent' && <AgentMenu />}
                             {role === 'user' && <UserMenu />}

@@ -1,13 +1,14 @@
 import logo from '../../assets/images/mfs.png';
+import Heading from '../../components/Shared/Heading';
 
 const Home = () => {
     return (
         <>
-            <div className="text-center">
-                <h1 className="text-3xl font-bold">Mobile Financial Service (MFS)</h1>
+            <div className="">
                 <div className='w-1/2 mx-auto'>
                     <img src={logo} alt='logo' />
                 </div>
+                <Heading title={"Mobile Financial Service (MFS)"} center />
             </div>
         </>
     );

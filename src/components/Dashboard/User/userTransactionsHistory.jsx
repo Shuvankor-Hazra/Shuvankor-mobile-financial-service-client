@@ -4,7 +4,7 @@ import Heading from "../../Shared/Heading";
 const UserTransactionsHistory = () => {
     return (
         <>
-            <Heading title={"User Transactions History"} center />
+            <Heading title={"User Transactions History"} subtitle={'Mobile Financial Service (MFS)'} center />
             <div className="mt-10">
                 <div className="overflow-x-auto">
                     <table className="table">

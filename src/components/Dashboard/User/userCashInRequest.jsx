@@ -4,7 +4,7 @@ import Heading from "../../Shared/Heading";
 const UserCashInRequest = () => {
     return (
         <>
-            <Heading title={'User Cash-In Request'} center />
+            <Heading title={'User Cash-In Request'} subtitle={'Mobile Financial Service (MFS)'} center />
             <div className="max-w-md mx-auto mt-52">
                 <form
                     // onSubmit={handleSubmit}
