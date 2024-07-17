@@ -1,10 +1,16 @@
+import Heading from "../../Shared/Heading";
 
 
 const UserBalanceInquiry = () => {
     return (
-        <div>
-            User Balance Inquiry
-        </div>
+        <>
+            <Heading title={'User Balance Inquiry'} center />
+            <div className=" max-w-2xl mx-auto flex gap-2 items-center justify-center mt-52 text-3xl font-bold ">
+                <h1>Total Amount:</h1>
+                <span className="">5000</span>
+                <h1>Tk.</h1>
+            </div>
+        </>
     );
 }
 
